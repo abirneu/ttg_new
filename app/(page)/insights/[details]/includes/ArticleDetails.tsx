@@ -7,8 +7,18 @@ import { FiCalendar, FiClock, FiEye } from "react-icons/fi";
 import articlesData from "@/app/data/articles.json";
 import Link from "next/link";
 
+type ArticleContentBlock = {
+    type: "paragraph" | "heading";
+    text: string;
+};
+
+type Article = (typeof articlesData)[number] & {
+    content?: ArticleContentBlock[];
+    views?: string;
+};
+
 interface ArticleDetailsProps {
-    article: any;
+    article: Article;
 }
 
 const ArticleDetails: React.FC<ArticleDetailsProps> = ({ article }) => {
@@ -136,7 +146,7 @@ const ArticleDetails: React.FC<ArticleDetailsProps> = ({ article }) => {
                         <div className="prose prose-lg prose-slate max-w-none">
                             {article.content ? (
                                 article.content.map(
-                                    (block: any, index: number) => {
+                                    (block: ArticleContentBlock, index: number) => {
                                         if (block.type === "paragraph") {
                                             return (
                                                 <p

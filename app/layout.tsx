@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
+import { ReduxProvider } from "./redux/provider";
 
 const funnelSans = Funnel_Sans({
     subsets: ["latin"],
@@ -63,9 +64,11 @@ export default function RootLayout({
             className={`${clashDisplay.variable} ${funnelSans.variable}`}
         >
             <body className="flex min-h-screen flex-col">
-                <NavBar />
-                <main className="grow">{children}</main>
-                <Footer />
+                <ReduxProvider>
+                    <NavBar />
+                    <main className="grow">{children}</main>
+                    <Footer />
+                </ReduxProvider>
             </body>
         </html>
     );

@@ -2,7 +2,6 @@ import React from "react";
 import Link from "next/link";
 import Container from "@/app/components/Container";
 import jobsData from "@/app/data/jobs.json";
-import InfoBadge from "@/app/components/InfoBadge";
 import CommonButton from "@/app/components/CommonButton";
 
 type JobDetails = (typeof jobsData)[number];

@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Container from "./Container";
-import CommonButton from "./CommonButton";
+import ContactButton from "./ContactButton";
 
 const navLinks = [
     { name: "Home", href: "/" },
@@ -161,9 +161,9 @@ const NavBar = () => {
 
                 {/* Action Section */}
                 <div className="flex items-center gap-4">
-                    <CommonButton
+                    <ContactButton
                         href="/contact"
-                        text="Contact Us "
+                        text="Contact Us"
                         className="hidden sm:flex"
                         icon="/icons/Button_arrow/arrow-up-right.png"
                     />
@@ -272,7 +272,7 @@ const NavBar = () => {
                                     ))}
                                 </nav>
 
-                                <CommonButton
+                                <ContactButton
                                     href="/contact"
                                     text="Contact Us"
                                     icon="/icons/Button_arrow/arrow-up-right.png"

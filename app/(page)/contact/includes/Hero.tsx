@@ -1,6 +1,7 @@
 import React from "react";
 import Container from "@/app/components/Container";
 import InfoBadge from "@/app/components/InfoBadge";
+import CommonButton from "@/app/components/CommonButton";
 
 const Hero = () => {
     return (
@@ -34,6 +35,12 @@ const Hero = () => {
                             Have a question or project in mind? Reach out—we’ll
                             respond within 24 hours with clear next steps.
                         </p>
+                        <CommonButton
+                            href="/consultation"
+                            text="Get In Touch"
+                            icon="/icons/Button_arrow/arrow-up-right.png"
+                            className="mt-4 w-fit"
+                        />
                     </div>
                 </div>
             </Container>

@@ -33,10 +33,6 @@ const AllArticles = () => {
     const endIndex = startIndex + itemsPerPage;
     const displayedArticles = filteredArticles.slice(startIndex, endIndex);
 
-    React.useEffect(() => {
-        setCurrentPage(1);
-    }, [activeCategory]);
-
     return (
         <section className="bg-[#f7f7f7] py-16 md:py-24">
             <Container>
@@ -44,7 +40,10 @@ const AllArticles = () => {
                     {categories.map((category) => (
                         <button
                             key={category}
-                            onClick={() => setActiveCategory(category)}
+                            onClick={() => {
+                                setActiveCategory(category);
+                                setCurrentPage(1);
+                            }}
                             className={`relative rounded-xl px-8 py-2.5 text-[15px] font-medium transition-all duration-300 ${
                                 activeCategory === category
                                     ? "border-3 border-[#d9d9d9] bg-[#0C7E9A] text-white shadow-lg"
