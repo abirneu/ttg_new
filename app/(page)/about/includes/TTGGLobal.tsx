@@ -103,26 +103,28 @@ const TTGGLobal = () => {
                             One Partner, All Capabilities
                         </h2>
 
-                        <p className="font-funnel mt-4 max-w-3xl text-[14px] leading-[1.55] text-[#4f555c] md:text-[16px]">
+                        <p className="font-funnel mt-4 max-w-3xl text-center md:text-left text-[14px] leading-[1.55] text-[#4f555c] md:text-[16px]">
                             Most companies work with 4-6 vendors for what TTG
                             delivers under one roof. We eliminate coordination
                             overhead and fragmented delivery through a unified
                             operational architecture.
                         </p>
                     </div>
-
-                    <CommonButton
+                    <div className="flex items-center justify-center md:items-start">
+                        <CommonButton
                         href="/contact"
                         text="Book a Consultaion"
                         icon="/icons/Button_arrow/double-right-arrow.png"
                         className="h-13 w-fit shrink-0"
                     />
+                    </div>
+                    
                 </div>
 
                 <div className="mt-10 overflow-hidden rounded-2xl border border-[#d2d6d8] md:mt-14">
                     <div className="grid grid-cols-1 md:grid-cols-4">
                         <article
-                            className="flex min-h-86.25 flex-col border-b border-[#d8dbdd] p-6 md:min-h-107.5 md:border-r md:border-b-0 md:p-8"
+                            className="flex min-h-70 md:min-h-86.25 flex-col border-b border-[#d8dbdd] p-6 md:min-h-107.5 md:border-r md:border-b-0 md:p-8"
                             style={{
                                 backgroundColor: "#f7f8f9",
                                 backgroundImage:
@@ -145,7 +147,7 @@ const TTGGLobal = () => {
                         </article>
 
                         <article
-                            className="flex min-h-86.25 flex-col border-b border-[#d8dbdd] p-6 md:min-h-107.5 md:border-r md:border-b-0 md:p-8"
+                            className="flex min-h-70 md:min-h-86.25 flex-col border-b border-[#d8dbdd] p-6 md:min-h-107.5 md:border-r md:border-b-0 md:p-8"
                             style={{
                                 backgroundColor: "#f7f8f9",
                                 backgroundImage:
@@ -168,7 +170,7 @@ const TTGGLobal = () => {
                         </article>
 
                         <article
-                            className="flex min-h-86.25 flex-col border-b border-[#d8dbdd] p-6 md:min-h-107.5 md:border-r md:border-b-0 md:p-8"
+                            className="flex min-h-70 md:min-h-86.25 flex-col border-b border-[#d8dbdd] p-6 md:min-h-107.5 md:border-r md:border-b-0 md:p-8"
                             style={{
                                 backgroundColor: "#f7f8f9",
                                 backgroundImage:
@@ -191,7 +193,7 @@ const TTGGLobal = () => {
                         </article>
 
                         <article
-                            className="flex min-h-86.25 flex-col p-6 md:min-h-107.5 md:p-8"
+                            className="flex min-h-70 md:min-h-86.25 flex-col p-6 md:min-h-107.5 md:p-8"
                             style={{
                                 backgroundColor: "#f7f8f9",
                                 backgroundImage:

@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import {
-    FiArrowRight,
     FiCompass,
     FiLayout,
     FiNavigation,
@@ -57,19 +56,23 @@ const workflowSteps = [
 const HowWeWork = () => {
     return (
         <section className="bg-[#f4f6f7]">
-            <Container className="py-16 md:py-24">
-                <div className="grid grid-cols-1 gap-12 lg:grid-cols-[0.95fr_1.15fr] lg:gap-10">
-                    <div className="lg:sticky lg:top-28 lg:self-start">
-                        <InfoBadge
+            <Container className="py-10 md:py-24">
+                <div className="grid grid-cols-1 gap-12 md:grid-cols-[0.95fr_1.15fr] md:gap-10">
+                    <div className="md:sticky md:top-28 md:self-start  ">
+                        <div className="flex items-center justify-center md:justify-start md:items-start">
+                            <InfoBadge
                             icon="/icons/Badges/solar_settings.png"
                             text="How We Work"
                         />
 
-                        <h2 className="font-clash mt-7 max-w-140 text-[44px] leading-[1.1] font-medium text-[#0b1015] md:text-[54px] md:leading-[1.02]">
+                        </div>
+                        
+
+                        <h2 className="font-clash mt-7 max-w-140 text-[28px] text-center md:text-left leading-[1.1] font-medium text-[#0b1015] md:text-[54px] md:leading-[1.02]">
                             From Inquiry to Results in 5 Steps
                         </h2>
 
-                        <p className="font-funnel mt-8 max-w-140 text-[16px] leading-[1.55] text-[#4c5762] md:text-[16px]">
+                        <p className="font-funnel mt-8 max-w-140 text-[14px] text-center md:text-left leading-[1.55] text-[#4c5762] md:text-[16px]">
                             Our refined process transforms your vision into a
                             high-performing and scalable reality through
                             structured execution, clear milestones, and
@@ -88,7 +91,7 @@ const HowWeWork = () => {
                                     style={{ zIndex: index + 1 }}
                                 >
                                     <div className="rounded-xl border border-[#d5d5d5] bg-[#fcfcfc] p-4 md:p-5">
-                                        <div className="flex items-end-safe justify-between gap-10 md:items-start">
+                                        <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between md:gap-10">
                                             <div>
                                                 <div className="flex items-start justify-between gap-4">
                                                     <span className="inline-flex h-8 w-8 items-center justify-center rounded-sm bg-[#0f1319] text-white">
@@ -107,16 +110,10 @@ const HowWeWork = () => {
                                                     {step.description}
                                                 </p>
 
-                                                <button
-                                                    type="button"
-                                                    className="font-funnel mt-8 inline-flex items-center gap-3 text-[15px] font-semibold text-[#0a81a8] transition-opacity hover:opacity-80 md:text-[16px]"
-                                                >
-                                                    Learn more about this step
-                                                    <FiArrowRight size={17} />
-                                                </button>
+                                                
                                             </div>
 
-                                            <div className="relative h-52 overflow-hidden rounded-lg md:h-[240px] md:w-[390px]">
+                                            <div className="relative h-52 w-full overflow-hidden rounded-lg md:h-[240px] md:w-[390px]">
                                                 <Image
                                                     src={step.image}
                                                     alt={step.title}
@@ -126,6 +123,8 @@ const HowWeWork = () => {
                                                     unoptimized
                                                 />
                                             </div>
+
+                                           
                                         </div>
                                     </div>
                                 </article>

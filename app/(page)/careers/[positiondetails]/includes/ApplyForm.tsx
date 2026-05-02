@@ -33,32 +33,32 @@ const ApplyForm = ({ job }: ApplyFormProps) => {
     return (
         <main className="w-full overflow-hidden">
             <section
-                className="relative w-full overflow-hidden pt-24 pb-6"
+                className="relative w-full overflow-hidden pb-6"
                 style={{
                     backgroundImage: `url('/images/Careers/apply-form-bg-img.png')`,
                     backgroundSize: "cover",
-                    backgroundPosition: "center top",
+                    backgroundPosition: "center -40px",
                     backgroundRepeat: "no-repeat",
                     backgroundAttachment: "scroll",
                 }}
             >
-                <Container>
+                <Container className="pt-24 md:pt-22">
                     <div className="grid items-center gap-10">
                         <div className="max-w-4xl md:mt-20">
-                            <h1 className="font-clash mt-5 text-[36px] font-medium text-[#0a0f17] md:text-[48px]">
+                            <h1 className="font-clash mt-5 text-center md:text-left text-[28px] font-medium text-[#0a0f17] md:text-[48px]">
                                 {job.title}
                             </h1>
 
-                            <div className="mt-5 flex flex-wrap gap-3">
-                                <span className="font-funnel inline-flex items-center gap-2 rounded-full border border-[#d9f2ff] bg-[#f6f8f9] px-4 py-2 text-[14px] font-[14px] text-[#464f58] shadow-[0_2px_8px_rgba(12,126,154,0.06)]">
+                            <div className="mt-5 flex flex-wrap items-center justify-center md:justify-start gap-3">
+                                <span className="font-funnel inline-flex items-center  gap-2 rounded-full border border-[#d9f2ff] bg-[#f6f8f9] px-4 py-2 text-[12px] md:text-[14px]  text-[#464f58] shadow-[0_2px_8px_rgba(12,126,154,0.06)]">
                                     <span className="h-2 w-2 rounded-full bg-[#0c7e9a]" />
                                     {job.type}
                                 </span>
-                                <span className="font-funnel inline-flex items-center gap-2 rounded-full border border-[#d9f2ff] bg-[#f6f8f9] px-4 py-2 text-[14px] font-[14px] text-[#464f58] shadow-[0_2px_8px_rgba(12,126,154,0.06)]">
+                                <span className="font-funnel inline-flex items-center gap-2 rounded-full border border-[#d9f2ff] bg-[#f6f8f9] px-4 py-2 text-[12px] md:text-[14px]  text-[#464f58] shadow-[0_2px_8px_rgba(12,126,154,0.06)]">
                                     <span className="h-2 w-2 rounded-full bg-[#0c7e9a]" />
                                     {job.location}
                                 </span>
-                                <span className="font-funnel inline-flex items-center gap-2 rounded-full border border-[#d9f2ff] bg-[#f6f8f9] px-4 py-2 text-[14px] text-[#464f58] shadow-[0_2px_8px_rgba(12,126,154,0.06)]">
+                                <span className="font-funnel inline-flex items-center gap-2 rounded-full border border-[#d9f2ff] bg-[#f6f8f9] px-4 py-2 text-[12px] md:text-[14px]  text-[#464f58] shadow-[0_2px_8px_rgba(12,126,154,0.06)]">
                                     <span className="h-2 w-2 rounded-full bg-[#0c7e9a]" />
                                     {job.experience}
                                 </span>
@@ -645,9 +645,9 @@ const ApplyForm = ({ job }: ApplyFormProps) => {
                             stored securely.
                         </p>
 
-                        <div className="flex flex-row justify-end gap-2.5">
+                        <div className="flex flex-row justify-center items-center md:justify-end gap-2.5 z-99">
                             <Link
-                                href={`/careers/${job.id}`}
+                                href={`/careers`}
                                 className="font-funnel inline-flex items-center rounded-full border border-[#0c7e9a] px-5 py-2 text-[14px] font-medium text-[#252525]"
                             >
                                 <span className="mr-2">
@@ -674,7 +674,7 @@ const ApplyForm = ({ job }: ApplyFormProps) => {
                                         />
                                     </svg>
                                 </span>
-                                Back to Job Description
+                                Back to Career
                             </Link>
 
                             <CommonButton

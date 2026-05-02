@@ -180,15 +180,15 @@ export function MCQSystem() {
 
     if (submitted) {
         return (
-            <div className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-5 pt-24 pb-10 md:pt-20">
+            <div className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-5 pt-24 pb-10 md:min-h-screen md:pt-20">
                 {/* Background Image */}
-                <div className="absolute inset-y-0 bottom-0 -z-10 h-auto w-full">
+                <div className="absolute inset-0 -z-10">
                     <Image
                         src="/images/Consultation/consultation.png"
                         alt="Consultation Background"
-                        width={1920}
-                        height={1080}
-                        className="h-auto w-full opacity-100"
+                        fill
+                        sizes="100vw"
+                        className="object-cover opacity-100"
                         priority
                     />
                 </div>
@@ -223,15 +223,15 @@ export function MCQSystem() {
     }
 
     return (
-        <div className="relative flex flex-col overflow-hidden px-5 pt-24 md:min-h-screen md:px-0 md:pt-34">
+        <div className="relative flex min-h-screen flex-col overflow-hidden px-5 pt-24 md:min-h-screen md:px-0 md:pt-34">
             {/* Background Image */}
-            <div className="absolute inset-y-0 bottom-0 -z-10 h-auto w-full">
+            <div className="absolute inset-0 -z-10">
                 <Image
                     src="/images/Consultation/consultation.png"
                     alt="Consultation Background"
-                    width={1920}
-                    height={1080}
-                    className="h-auto w-full opacity-100"
+                    fill
+                    sizes="100vw"
+                    className="object-cover opacity-100"
                     priority
                 />
             </div>
@@ -379,7 +379,7 @@ export function MCQSystem() {
                         {/* Multi Select Options */}
                         {currentQuestion.type === "multi_select" && (
                             <div className="bg-[#f1f6f8]-60 rounded-2xl border-2 border-white bg-clip-padding p-8 backdrop-blur-md backdrop-filter">
-                                <h3 className="text-md pb-6 font-bold text-black md:text-2xl">
+                                <h3 className="text-[20px] pb-6 font-bold text-black md:text-2xl">
                                     {currentQuestion.question}
                                 </h3>
                                 <div className="flex flex-wrap gap-3">
@@ -398,7 +398,7 @@ export function MCQSystem() {
                                                             option
                                                         )
                                                     }
-                                                    className={`font-funnel cursor-pointer rounded-full border px-6 py-3 text-[18px] transition-all duration-300 ${
+                                                    className={`font-funnel cursor-pointer rounded-full border px-6 py-3 text-[14px] md:text-[18px] transition-all duration-300 ${
                                                         isSelected
                                                             ? "border-[#7ab5c2] bg-[#d9eaf0] text-black"
                                                             : "border-white/10 bg-white text-black/70 hover:bg-white/70"
@@ -416,7 +416,7 @@ export function MCQSystem() {
                         {/* Text Input */}
                         {currentQuestion.type === "text_input" && (
                             <div className="bg-[#f1f6f8]-60 rounded-2xl border-2 border-white bg-clip-padding p-8 backdrop-blur-md backdrop-filter">
-                                <h3 className="text-md pb-6 font-bold text-black md:text-[20px]">
+                                <h3 className="text-[20px] pb-6 font-bold text-black md:text-[20px]">
                                     {currentQuestion.question}
                                 </h3>
                                 <div className="relative w-full overflow-hidden rounded-xl p-[1px]">

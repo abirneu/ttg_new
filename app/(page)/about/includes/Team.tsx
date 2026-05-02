@@ -39,7 +39,7 @@ const teamMembers = [
 
 const Team = () => {
     return (
-        <section className="w-full overflow-hidden bg-[#ffffff] py-16 md:py-10">
+        <section className="w-full overflow-hidden bg-[#ffffff] py-5 md:py-10">
             <Container>
                 <div className="max-w-3xl">
                     <div className="flex justify-center md:justify-start">
@@ -99,10 +99,10 @@ const Team = () => {
 
                                         <div className="mt-5 flex items-start justify-between gap-4 px-5">
                                             <div>
-                                                <p className="font-clash text-btn-primary text-[16px] font-medium uppercase">
+                                                <p className="font-clash text-btn-primary text-[14px] md:text-[16px] font-medium uppercase">
                                                     {member.role}
                                                 </p>
-                                                <h3 className="font-clash mt-1 text-[24px] leading-tight font-medium text-[#0d1219]">
+                                                <h3 className="font-clash mt-1 text-[20px] md:text-[24px] leading-tight font-medium text-[#0d1219]">
                                                     {member.name}
                                                 </h3>
                                             </div>
@@ -112,9 +112,9 @@ const Team = () => {
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                                 aria-label={`Visit ${member.name} on LinkedIn`}
-                                                className="mt-2 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-md border border-[#0c7e9a] text-[#0c7e9a] transition-colors duration-300 hover:bg-[#0c7e9a] hover:text-white"
+                                                className="mt-2 inline-flex h-6 w-6 md:h-8 md:w-8 shrink-0 items-center justify-center rounded-md border border-[#0c7e9a] text-[#0c7e9a] transition-colors duration-300 hover:bg-[#0c7e9a] hover:text-white"
                                             >
-                                                <FaLinkedinIn className="h-4 w-4" />
+                                                <FaLinkedinIn className="h-3 w-3 md:h-4 md:w-4" />
                                             </a>
                                         </div>
                                     </article>

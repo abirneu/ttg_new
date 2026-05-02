@@ -21,12 +21,12 @@ const ProvenTrust = () => {
                 backgroundSize: "16px 16px",
             }}
         >
-            <Container className="py-14 md:py-20">
+            <Container className="py-10 md:py-20">
                 <h2 className="font-clash font-Regular text-center text-[18px] text-[#111827] md:text-[28px]">
                     Proven & Trusted Worldwide
                 </h2>
 
-                <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-6">
+                <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-6">
                     {reviewCards.map((item) => (
                         <article
                             key={item.id}

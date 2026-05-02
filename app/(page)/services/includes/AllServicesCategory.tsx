@@ -23,7 +23,7 @@ const verificationCards: VerificationCard[] = [
     },
     {
         title: "Technology & Automation",
-        tags: ["Software Development", "AI & Workflow Automation"],
+        tags: [ "AI & Workflow Automation"],
         image: "/images/Services/service-12.png",
     },
     {

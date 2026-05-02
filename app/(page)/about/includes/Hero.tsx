@@ -18,13 +18,16 @@ const Hero = () => {
             <Container className="relative z-10 py-24 pt-32 md:py-28 md:pt-40">
                 <div className="grid items-center gap-10 md:grid-cols-2 md:gap-6">
                     <div className="max-w-2xl">
-                        <InfoBadge
+                        <div className="flex items-center justify-center md:justify-start">
+                            <InfoBadge
                             icon="/icons/Badges/three-people.png"
                             text="Who we are"
                             className=""
                         />
+                        </div>
+                        
 
-                        <h1 className="font-clash text-4xl leading-tight font-medium text-[#04070D] md:text-[40px]">
+                        <h1 className="font-clash text-[28px] text-center md:text-left leading-tight font-medium text-[#04070D] md:text-[40px]">
                             We design systems powering modern companies.
                         </h1>
 
@@ -59,14 +62,19 @@ const Hero = () => {
                                 />
                             </article>
 
-                            <article className="about-floating-card-front absolute top-37 left-30 z-30 w-72 md:w-108">
-                                <Image
-                                    src="/images/About/monthly-breakdown.png"
-                                    alt="Efficiency gains card"
-                                    width={768}
-                                    height={768}
-                                    className="md:h-[273px] md:w-[290px]"
-                                />
+                            <article className="about-floating-card-front absolute top-37 left-30 z-30 w-72 overflow-hidden rounded-4xl md:w-108">
+                                <video
+                                    className="block h-[240px] w-[250px] scale-[1.07] rounded-3xl object-cover"
+                                    autoPlay
+                                    muted
+                                    loop
+                                    playsInline
+                                >
+                                    <source
+                                        src="/videos/about/efficiency.mp4"
+                                        type="video/mp4"
+                                    />
+                                </video>
                             </article>
                         </div>
                     </div>

@@ -45,23 +45,28 @@ const SuccessStories = () => {
             <Container className="relative py-14 md:py-20">
                 <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
                     <div>
-                        <InfoBadge
+                        <div className="flex items-center justify-center md:justify-start">
+                            <InfoBadge
                             icon="/icons/Badges/success.png"
-                            text="Success Stories"
+                            text="Why TotalTech Global"
                         />
+                        </div>
+                        
 
-                        <h2 className="font-clash mt-7 max-w-3xl text-[34px] font-medium text-[#2d3136] md:text-[40px]">
+                        <h2 className="text-center md:text-start font-clash  mt-7 max-w-3xl text-[28px] font-medium text-[#2d3136] md:text-[40px]">
                             Everything you need to scale-four core capabilities
                             in one integrated partner.
                         </h2>
                     </div>
-
-                    <CommonButton
+                    <div className="flex items-center justify-center md:justify-start">
+                        <CommonButton
                         href="/about"
                         text="Explore Case Study"
                         icon="/icons/Button_arrow/double-right-arrow.png"
-                        className="w-fit self-start shadow-[0_14px_28px_rgba(13,90,112,0.28)] md:mt-2 md:self-auto"
+                        className="w-fit  md:mt-2 md:self-auto"
                     />
+                    </div>
+                    
                 </div>
 
                 <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-2">
@@ -83,11 +88,11 @@ const SuccessStories = () => {
                             </div>
 
                             <div className="flex min-h-42.5 flex-col gap-3 px-5 py-5 md:px-6">
-                                <h3 className="font-clash text-[25px] leading-[1.2] font-medium text-[#1f2328] md:text-[20px]">
+                                <h3 className="font-clash text-[14px]  font-medium text-[#1f2328] md:text-[20px]">
                                     {card.title}
                                 </h3>
 
-                                <p className="font-funnel max-w-xl text-[15px] leading-[1.6] text-[#555555] md:text-[16px]">
+                                <p className="font-funnel max-w-xl text-[12px] leading-[1.6] text-[#555555] md:text-[16px]">
                                     {card.description}
                                 </p>
 

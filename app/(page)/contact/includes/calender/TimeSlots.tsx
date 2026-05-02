@@ -46,17 +46,15 @@ const MeetingPersonalInfoForm = ({
     onCancel: () => void;
 }) => {
     return (
-        <div className="mt-0 space-y-4 rounded-lg p-6">
-            <h3 className="mb-4 text-xl font-semibold text-black">
-                Enter Your Details
-            </h3>
-            <form onSubmit={handleFormSubmit} className="space-y-4">
+        <div className="mt-0   space-y-4 rounded-lg p-1">
+            
+            <form onSubmit={handleFormSubmit} className="space-y-2">
                 <div>
                     <label
                         htmlFor="full_name"
-                        className="mb-2 block text-sm text-black"
+                        className="mb-1 block text-[14px] font-funnel font-bold text-black"
                     >
-                        Full Name *
+                        Name
                     </label>
                     <input
                         type="text"
@@ -65,16 +63,16 @@ const MeetingPersonalInfoForm = ({
                         value={formData.full_name}
                         onChange={handleFormChange}
                         required
-                        className="w-full rounded-lg border border-gray-700 bg-gray-900 px-4 py-3 text-white transition-colors focus:border-orange-500 focus:outline-none"
-                        placeholder="John Doe"
+                        className="w-full rounded-lg shadow-sm bg-white px-4 py-3 text-black transition-colors"
+                        placeholder="Enter your full name"
                     />
                 </div>
                 <div>
                     <label
                         htmlFor="email"
-                        className="mb-2 block text-sm text-black"
+                        className="mb-1 block text-[14px] font-funnel font-bold text-black"
                     >
-                        Business Mail *
+                        Email
                     </label>
                     <input
                         type="email"
@@ -83,16 +81,16 @@ const MeetingPersonalInfoForm = ({
                         value={formData.email}
                         onChange={handleFormChange}
                         required
-                        className="w-full rounded-lg border border-gray-700 bg-gray-900 px-4 py-3 text-white transition-colors focus:border-orange-500 focus:outline-none"
-                        placeholder="john@example.com"
+                        className="w-full rounded-lg shadow-sm bg-white px-4 py-3 text-black transition-colors focus:border-orange-500 focus:outline-none"
+                        placeholder="Enter your email"
                     />
                 </div>
                 <div>
                     <label
                         htmlFor="phone_number"
-                        className="mb-2 block text-sm text-black"
+                        className="mb-1 block text-[14px] font-funnel font-bold text-black"
                     >
-                        Phone Number *
+                        Phone Number
                     </label>
                     <input
                         type="tel"
@@ -101,16 +99,16 @@ const MeetingPersonalInfoForm = ({
                         value={formData.phone_number}
                         onChange={handleFormChange}
                         required
-                        className="w-full rounded-lg border border-gray-700 bg-gray-900 px-4 py-3 text-white transition-colors focus:border-orange-500 focus:outline-none"
-                        placeholder="+1 234 567 8900"
+                        className="w-full rounded-lg shadow-sm bg-white px-4 py-3 text-black transition-colors focus:border-orange-500 focus:outline-none"
+                        placeholder="Enter your phone number"
                     />
                 </div>
                 <div>
                     <label
                         htmlFor="summary"
-                        className="mb-2 block text-sm text-black"
+                        className="mb-2 block text-[14px] font-funnel font-bold text-black"
                     >
-                        Meeting Summary *
+                        Meeting Purpose
                     </label>
                     <input
                         type="text"
@@ -119,22 +117,22 @@ const MeetingPersonalInfoForm = ({
                         value={formData.summary}
                         onChange={handleFormChange}
                         required
-                        className="w-full rounded-lg border border-gray-700 bg-gray-900 px-4 py-3 text-white transition-colors focus:border-orange-500 focus:outline-none"
-                        placeholder="Quick consultation"
+                        className="w-full rounded-lg shadow-sm bg-white px-4 py-3 text-black transition-colors focus:border-orange-500 focus:outline-none"
+                        placeholder="Type your message "
                     />
                 </div>
                 <div className="flex gap-2 pt-2">
                     <button
                         type="button"
                         onClick={onCancel}
-                        className="bg-btn-primary flex-1 rounded-lg px-4 py-2.5 text-white transition-colors hover:bg-gray-600"
+                        className=" flex-1  px-1 py-2.5 text-black transition-colors hover:bg-white rounded-full"
                     >
                         Cancel
                     </button>
                     <button
                         type="submit"
                         disabled={loading}
-                        className="bg-orbit-orange flex flex-1 items-center justify-center gap-2 rounded-lg px-4 py-1 text-sm font-semibold text-white transition-colors hover:cursor-pointer hover:bg-orange-300 disabled:cursor-not-allowed disabled:opacity-50"
+                        className="bg-btn-primary flex flex-1 items-center justify-center gap-2 rounded-full px-1 py-1 text-[16px] font-funnel font-semibold text-white transition-colors hover:cursor-pointer  disabled:cursor-not-allowed disabled:opacity-50"
                     >
                         {loading ? (
                             <>
@@ -334,7 +332,7 @@ const TimeSlots = ({ selectedDate }: { selectedDate: string }) => {
     };
 
     return (
-        <div className="mx-auto mr-6 w-full max-w-md rounded-xl bg-[#f3f7f8] p-6">
+        <div className="mx-auto mb-2 md:mb-0 md:ml-0 mr-2 ml-2 md:mr-6 w-full md:max-w-md rounded-xl bg-[#f3f7f8] p-6">
             {!showForm && !showMeetingDetails && (
                 <>
                     {/* Timezone selector */}
@@ -413,10 +411,10 @@ const TimeSlots = ({ selectedDate }: { selectedDate: string }) => {
                                     key={slot.id}
                                     className={`flex h-[56px] w-full items-center justify-between rounded-full px-5 text-sm font-medium transition-all duration-200 ${
                                         isUnavailable
-                                            ? "cursor-not-allowed bg-[#d2e0e4]/40 text-gray-400 opacity-50"
+                                            ? "cursor-not-allowed bg-[#d2e0e4] text-gray-400 opacity-50"
                                             : isSelected
                                               ? "bg-btn-primary text-white"
-                                              : "bg-[#d2e0e4] text-[#0b0b0b] hover:bg-[#c4d6dc]"
+                                              : "bg-[#d2e0e4] text-[#0b0b0b] "
                                     }`}
                                 >
                                     <button
@@ -438,10 +436,10 @@ const TimeSlots = ({ selectedDate }: { selectedDate: string }) => {
                                                 e.stopPropagation();
                                                 handleArrowClick(slot);
                                             }}
-                                            className="text-btn-primary flex h-10 w-10 shrink-0 cursor-pointer items-center justify-center rounded-full bg-white transition-colors hover:bg-gray-100"
+                                            className="text-btn-primary flex h-10 w-10 shrink-0 translate-x-3 cursor-pointer items-center justify-center rounded-full bg-white transition-colors hover:bg-gray-100"
                                             aria-label="Proceed to booking"
                                         >
-                                            <FaAngleDoubleRight size={16} />
+                                            <FaAngleDoubleRight size={18} />
                                         </button>
                                     )}
                                 </div>

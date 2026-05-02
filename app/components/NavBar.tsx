@@ -107,7 +107,7 @@ const NavBar = () => {
         <header
             className={`fixed top-0 left-0 z-50 w-full py-4 transition-colors duration-300 ${
                 isScrolled
-                    ? "bg-white shadow-[0_8px_24px_rgba(0,0,0,0.08)]"
+                    ? "bg-white "
                     : "bg-transparent"
             }`}
         >
@@ -126,7 +126,11 @@ const NavBar = () => {
                 {/* Navigation Links  */}
                 <nav
                     ref={navRef}
-                    className="relative hidden items-center gap-4 rounded-[40px] border border-white/20 bg-white/10 p-1 pr-5 pl-1.5 shadow-[0_4px_12px_rgba(0,0,0,0.05)] backdrop-blur-[6px] md:flex"
+                    className={`relative hidden items-center gap-4 rounded-[40px] border border-white/20 bg-white/10 p-1 pr-5 pl-1.5 backdrop-blur-[6px] md:flex ${
+                        isScrolled
+                            ? "shadow-none"
+                            : "shadow-[0_4px_12px_rgba(0,0,0,0.05)]"
+                    }`}
                 >
                     <span
                         aria-hidden="true"

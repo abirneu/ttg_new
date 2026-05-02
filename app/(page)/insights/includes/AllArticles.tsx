@@ -63,7 +63,7 @@ const AllArticles = () => {
                     ))}
                 </div>
 
-                <div className="grid grid-cols-1 gap-x-10 gap-y-16 md:grid-cols-2 lg:grid-cols-3">
+                <div className="grid grid-cols-1 gap-x-10 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
                     {displayedArticles.map((article) => (
                         <div
                             key={article.id}
@@ -86,7 +86,7 @@ const AllArticles = () => {
                             </div>
 
                             {/* Card Content */}
-                            <div className="flex flex-grow flex-col">
+                            <div className="flex flex-grow flex-col px-2 md:px-3">
                                 <h4 className="font-clash mb-3 text-xl leading-tight font-semibold text-[#04070D] transition-colors md:text-[20px]">
                                     {article.title}
                                 </h4>

@@ -11,20 +11,20 @@ const OpenPositions = () => {
             <Container>
                 <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
                     <div className="max-w-2xl">
-                        <h2 className="font-clash text-[24px] leading-tight font-medium text-[#0a0f17] md:text-[40px]">
+                        <h2 className="font-clash text-center md:text-left text-[28px] leading-tight font-medium text-[#0a0f17] md:text-[40px]">
                             Open Positions
                         </h2>
-                        <p className="font-funnel mt-1 text-[14px] leading-relaxed text-[#555555] md:text-[16px]">
+                        <p className="font-funnel text-center md:text-left mt-1 text-[14px] leading-relaxed text-[#555555] md:text-[16px]">
                             Filter by department or location to find your match.
                         </p>
                     </div>
 
                     <button
                         type="button"
-                        className="font-funnel inline-flex w-full max-w-68 items-center justify-between rounded-full border border-[#1083a3] bg-[#f5f7f8] px-5 py-2.5 text-[16px] font-medium text-[#1f242b] md:w-auto md:min-w-68"
+                        className="font-funnel relative inline-flex w-fit items-center rounded-full border border-[#1083a3] bg-[#f5f7f8] px-3 md:px-5 py-2 md:py-3  pr-12 md:pr-16 text-[14px] md:text-[16px] font-medium text-[#1f242b]"
                     >
                         All Department
-                        <span className="bg-btn-primary ml-4 flex h-9 w-9 items-center justify-center rounded-full text-white">
+                        <span className="bg-btn-primary absolute right-1 md:right-1 flex h-7 w-7 md:h-10 md:w-10 items-center justify-center rounded-full text-white">
                             <svg
                                 viewBox="0 0 20 20"
                                 fill="none"
@@ -57,9 +57,9 @@ const OpenPositions = () => {
                                         "repeating-linear-gradient(-33deg, rgba(18, 26, 34, 0.03) 0px, rgba(18, 26, 34, 0.03) 1px, transparent 1px, transparent 8px)",
                                 }}
                             >
-                                <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
-                                    <div>
-                                        <h3 className="font-clash text-[20px] leading-tight font-medium text-[#11161e] md:text-[24px]">
+                                <div className="flex flex-wrap items-center justify-between gap-3">
+                                    <div className="min-w-0 flex-1">
+                                        <h3 className="font-clash text-[16px] leading-tight font-medium text-[#11161e] md:text-[24px]">
                                             {opening.title}
                                         </h3>
 
@@ -74,7 +74,7 @@ const OpenPositions = () => {
 
                                     <Link
                                         href={`/careers/${opening.id}`}
-                                        className="font-funnel text-btn-primary self-start text-[16px] font-medium underline decoration-1 underline-offset-2 transition-opacity hover:opacity-85 md:self-center"
+                                        className="font-funnel text-btn-primary shrink-0 self-center text-[14px] font-medium underline decoration-1 underline-offset-2 transition-opacity hover:opacity-85"
                                     >
                                         Apply Now
                                     </Link>

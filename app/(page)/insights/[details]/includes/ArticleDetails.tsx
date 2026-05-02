@@ -22,7 +22,7 @@ interface ArticleDetailsProps {
 }
 
 const ArticleDetails: React.FC<ArticleDetailsProps> = ({ article }) => {
-    // Get related articles (excluding the current one)
+   
     const relatedArticles = articlesData
         .filter((a) => a.id !== article.id)
         .slice(0, 3);
@@ -42,10 +42,10 @@ const ArticleDetails: React.FC<ArticleDetailsProps> = ({ article }) => {
         <main className="min-h-screen bg-white">
             {/* Hero Section */}
             <section
-                className="relative pt-24 pb-12 md:pt-32 md:pb-20"
+                className="relative pt-24 pb-2 md:pt-32 md:pb-10"
                 style={{
                     backgroundImage:
-                        "url('/images/Insights/article-details-bg.png')",
+                        "url('/images/Insights/article-details.png')",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     backgroundRepeat: "no-repeat",
@@ -53,16 +53,16 @@ const ArticleDetails: React.FC<ArticleDetailsProps> = ({ article }) => {
                 }}
             >
                 <Container>
-                    <div className="mb-12 max-w-4xl">
-                        <h1 className="font-clash text-3xl leading-tight font-semibold text-[#04070D] md:text-[36px]">
+                    <div className="mx-auto mb-1 md:mb-12 max-w-4xl md:mx-0">
+                        <h1 className="font-clash text-center text-3xl leading-tight font-semibold text-[#04070D] md:text-left md:text-[36px]">
                             {article.title}
                         </h1>
                     </div>
 
-                    <div className="grid grid-cols-1 gap-8 md:gap-12 lg:grid-cols-12">
+                    <div className="grid grid-cols-1 gap-2 md:gap-12 lg:grid-cols-12">
                         {/* Main Image */}
-                        <div className="lg:col-span-8">
-                            <div className="relative aspect-[19/9] rounded-2xl p-2 shadow-sm md:p-3">
+                        <div className="order-2 md:order-none lg:col-span-8">
+                            <div className="relative aspect-[4/5] md:aspect-[19/9] rounded-2xl  shadow-sm ">
                                 <div className="relative h-full w-full overflow-hidden rounded-2xl">
                                     <Image
                                         src={article.image}
@@ -76,15 +76,15 @@ const ArticleDetails: React.FC<ArticleDetailsProps> = ({ article }) => {
                         </div>
 
                         {/* Sidebar Info */}
-                        <div className="flex h-fit flex-col justify-center gap-8 p-6 md:p-8 lg:col-span-4">
+                        <div className="order-1 flex h-fit flex-col items-center justify-center gap-8 p-6 text-center md:order-none md:items-start md:text-left lg:col-span-4 md:p-8">
                             {/* Author */}
                             {article.author && (
                                 <div>
-                                    <p className="mb-4 text-[14px] font-medium text-[#525353]">
+                                    <p className="mb-4 text-[14px] font-medium text-[#000000]">
                                         Written by
                                     </p>
-                                    <div className="flex items-center gap-4">
-                                        <div className="relative h-12 w-12 overflow-hidden rounded-full">
+                                    <div className="flex flex-col items-center justify-center gap-3 md:flex-row md:gap-4 md:justify-start">
+                                        <div className="relative h-12 w-12 border-2 border-btn-primary overflow-hidden rounded-full">
                                             <Image
                                                 src={article.author.image}
                                                 alt={article.author.name}
@@ -105,16 +105,16 @@ const ArticleDetails: React.FC<ArticleDetailsProps> = ({ article }) => {
                             )}
 
                             {/* Category */}
-                            <div>
+                            <div className="hidden md:block">
                                 <p className="mb-4 text-[14px] font-medium text-[#525353]">
                                     Category
                                 </p>
-                                <div className="flex flex-wrap gap-4">
+                                <div className="flex flex-wrap justify-center gap-4 md:justify-start">
                                     {categoryItems.map(
                                         (category: string, index: number) => (
                                             <span
                                                 key={`${category}-${index}`}
-                                                className="inline-flex items-center rounded-[14px] border border-[#CDD3DA] bg-[#ffffff] px-8 py-2.5 text-base font-medium text-[#525353]"
+                                                className="inline-flex items-center rounded-[14px] text-[16px] border border-[#CDD3DA] bg-[#ffffff] px-8 py-2.5 text-base font-medium text-[#525353]"
                                             >
                                                 {category}
                                             </span>
@@ -124,15 +124,44 @@ const ArticleDetails: React.FC<ArticleDetailsProps> = ({ article }) => {
                             </div>
 
                             {/* Metadata */}
-                            <div className="flex items-center justify-between border-t border-[#F1F5F9] pt-6">
-                                <div className="flex items-center gap-2 text-sm text-[#525353]">
+                            <div className="hidden items-center justify-center gap-5 border-t border-[#F1F5F9] pt-6 md:flex md:justify-start">
+                                <div className="flex items-center gap-2 text-sm text-[#4a5565]">
                                     <FiCalendar className="text-[#4a5565]" />
                                     <span>{article.date}</span>
                                 </div>
-                                <div className="flex items-center gap-2 text-sm text-[#525353]">
+                                <div className="flex items-center gap-2 text-sm text-[#4a5565]">
                                     <FiEye className="text-[#4a5565]" />
                                     <span>{article.views || "1K Viewers"}</span>
                                 </div>
+                            </div>
+                        </div>
+
+                        {/* Mobile: Metadata after image */}
+                        <div className="order-3 flex items-center justify-start gap-5 border-t border-[#F1F5F9] px-6 pt-6 text-left md:hidden">
+                            <div className="flex items-center gap-2 text-sm text-[#4a5565]">
+                                <FiCalendar className="text-[#4a5565]" />
+                                <span>{article.date}</span>
+                            </div>
+                            <div className="flex items-center gap-2 text-sm text-[#4a5565]">
+                                <FiEye className="text-[#4a5565]" />
+                                <span>{article.views || "1K Viewers"}</span>
+                            </div>
+                        </div>
+
+                        {/* Mobile: Category after metadata */}
+                        <div className="order-4 px-6 pb-2 text-left md:hidden">
+                            <p className="mb-4 text-[14px] font-medium text-black">
+                                Category
+                            </p>
+                            <div className="flex flex-wrap justify-start gap-4">
+                                {categoryItems.map((category: string, index: number) => (
+                                    <span
+                                        key={`${category}-${index}`}
+                                        className="inline-flex items-center rounded-[14px] text-[16px] border border-[#CDD3DA] bg-[#ffffff] px-8 py-2.5 text-base font-medium text-[#525353]"
+                                    >
+                                        {category}
+                                    </span>
+                                ))}
                             </div>
                         </div>
                     </div>
@@ -140,9 +169,9 @@ const ArticleDetails: React.FC<ArticleDetailsProps> = ({ article }) => {
             </section>
 
             {/* Content Section */}
-            <section className="py-16 md:py-24">
+            <section className="py-1 md:py-2">
                 <Container>
-                    <div className="mx-auto max-w-4xl">
+                    <div className="mx-auto ">
                         <div className="prose prose-lg prose-slate max-w-none">
                             {article.content ? (
                                 article.content.map(
@@ -178,8 +207,8 @@ const ArticleDetails: React.FC<ArticleDetailsProps> = ({ article }) => {
                         </div>
 
                         {/* Footer Meta */}
-                        <div className="mt-16 border-t border-[#F1F5F9] pt-8">
-                            <p className="text-sm font-medium text-[#94A3B8]">
+                        <div className="mt-1  pt-8">
+                            <p className="text-[16px] font-medium text-[#555555]">
                                 {article.date} - {article.readingTime}
                             </p>
                         </div>
@@ -188,10 +217,10 @@ const ArticleDetails: React.FC<ArticleDetailsProps> = ({ article }) => {
             </section>
 
             {/* Related Articles Section */}
-            <section className="bg-[#F8FAFC] py-24">
+            <section className="bg-[#F8FAFC] py-6 md:py-24">
                 <Container>
-                    <div className="mb-16 text-center">
-                        <h2 className="font-clash text-4xl font-medium text-[#04070D] md:text-[36px]">
+                    <div className="mb-5 md:mb-16 text-center">
+                        <h2 className="font-clash text-[24px] font-medium text-[#04070D] md:text-[36px]">
                             Related Articles
                         </h2>
                     </div>

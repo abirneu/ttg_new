@@ -22,8 +22,7 @@ const InfoBadge: React.FC<InfoBadgeProps> = ({ icon, text, className }) => {
                     />
                 </div>
             </div>
-
-            <span className="font-funnel text-[17px] font-medium whitespace-nowrap text-[#636363]">
+            <span className="font-funnel text-[12px] md:text-[17px] font-medium whitespace-nowrap text-[#636363]">
                 {text}
             </span>
         </div>

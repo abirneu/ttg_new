@@ -9,16 +9,21 @@ const CallInfo = () => {
             <div className="space-y-1">
                 {/* Logo and Title */}
                 <div className="space-y-3">
-                    <div className="flex h-59 items-center justify-center">
+                    <div className="flex h-39 items-center justify-center">
                         <div className="h-30 w-full border-b">
                             <Image
                                 src="/icons/ttg_logo.png"
                                 alt="TTG Logo"
                                 width={80}
                                 height={32}
-                                className="h-10 w-auto"
+                                className="md:h-10 h-15 w-auto"
                             />
+                             <div className="relative mt-3 mb-3 h-px  bg-black w-[260px]  md:w-[200px]">
+                                <span className="absolute -left-1 top-1/2 h-2 w-2 -translate-y-1/2 rounded-full bg-black" />
+                                <span className="absolute -right-1 top-1/2 h-2 w-2 -translate-y-1/2 rounded-full bg-black" />
+                            </div>
                         </div>
+                        
                     </div>
                 </div>
 
@@ -37,7 +42,7 @@ const CallInfo = () => {
                 </div>
 
                 {/* Description */}
-                <p className="mt-8 text-sm leading-relaxed text-black">
+                <p className="mt-8 text-[12px] md:text-sm leading-relaxed text-black">
                     Discuss your project goals with the Exoveon team. We&apos;ll
                     explore your idea, scope the project complexity, and suggest
                     the best plan for your product journey.
@@ -45,20 +50,20 @@ const CallInfo = () => {
             </div>
 
             {/* address */}
-            <div className="flec-row mt-auto mb-15 flex gap-5 pt-10 text-black">
+            <div className="flex-row mt-auto mb-15 flex gap-15 pt-10 text-black">
                 <div>
-                    <p className="font-clash text-[25px] font-medium text-[#0b0b0b] md:text-[16px]">
+                    <p className="font-clash text-[16px] font-medium text-[#0b0b0b] ">
                         Contact us on
                     </p>
                     <p className="text-[12px]">+880 1711 000 000</p>
                     <p className="text-[12px]">yourmail@email.com</p>
                 </div>
                 <div>
-                    <p className="font-clash text-[25px] font-medium text-[#0b0b0b] md:text-[16px]">
+                    <p className="font-clash text-[16px] font-medium text-[#0b0b0b] ">
                         Find us
                     </p>
                     <p className="text-[12px] leading-relaxed text-black">
-                        6391 Elgin St. Celina, Delaware 10299
+                        6391 Elgin St. Celina, <br /> Delaware 10299
                     </p>
                 </div>
             </div>

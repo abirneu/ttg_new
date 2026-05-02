@@ -5,7 +5,7 @@ import jobsData from "@/app/data/jobs.json";
 const jobs = jobsData;
 
 const inputClassName =
-    "h-11 w-full rounded-xl border border-transparent bg-[#f8f8f8] px-4 font-funnel text-[16px] text-[#3f454d] placeholder:text-[#a4a8ad] outline-none focus:border-[#9bcdd8]";
+    "h-11 w-full rounded-xl border border-transparent bg-[#ffffff] px-4 font-funnel text-[16px] text-[#3f454d] placeholder:text-[#a4a8ad] outline-none focus:border-[#9bcdd8]";
 
 const ApplyForm = () => {
     return (
@@ -21,14 +21,14 @@ const ApplyForm = () => {
             <Container>
                 <div className="grid items-start gap-10 lg:grid-cols-[0.86fr_1.14fr] lg:gap-14">
                     <div className="max-w-2xl pt-2 md:pt-8">
-                        <h2 className="font-clash text-[30px] leading-[1.12] font-medium text-[#0a1018] md:text-[40px]">
+                        <h2 className="font-clash text-center md:text-left text-[28px] leading-[1.12] font-medium text-[#0a1018] md:text-[40px]">
                             Shape the
                             <span className="text-btn-primary block">
                                 Future with Us.
                             </span>
                         </h2>
 
-                        <p className="font-funnel mt-4 max-w-md text-[18px] leading-[1.55] text-[#555555] md:text-[16px]">
+                        <p className="font-funnel text-center md:text-left mt-4 max-w-md leading-[1.55] text-[#555555] text-[16px]">
                             We aren&apos;t just looking for employees;
                             we&apos;re looking for visionaries. Drop your CV to
                             get started.
@@ -131,7 +131,7 @@ const ApplyForm = () => {
                                                 id="position"
                                                 name="position"
                                                 defaultValue=""
-                                                className="font-funnel h-11 w-full appearance-none rounded-xl border border-transparent bg-[#f8f8f8] pr-10 pl-11 text-[16px] text-[#3f454d] outline-none focus:border-[#9bcdd8]"
+                                                className="font-funnel h-11 w-full appearance-none rounded-xl border border-transparent bg-[#ffffff] pr-10 pl-11 text-[16px] text-[#3f454d] outline-none focus:border-[#9bcdd8]"
                                             >
                                                 <option value="" disabled>
                                                     Select a role
@@ -181,7 +181,7 @@ const ApplyForm = () => {
                                             name="cv"
                                             type="file"
                                             accept=".pdf,.doc,.docx"
-                                            className="font-funnel file:font-funnel h-11 w-full cursor-pointer rounded-xl border border-transparent bg-[#f8f8f8] pt-1 pr-2 pl-2 text-[15px] text-[#9da2a8] outline-none file:mr-3 file:cursor-pointer file:rounded-md file:border file:border-[#9fa4a9] file:bg-[#f0f0f0] file:px-2.5 file:py-1.5 file:text-[15px] file:text-[#4f5358] focus:border-[#9bcdd8]"
+                                            className="font-funnel file:font-funnel h-11 w-full cursor-pointer rounded-xl border border-transparent bg-[#ffffff] pt-1 pr-2 pl-2 text-[15px] text-[#9da2a8] outline-none file:mr-3 file:cursor-pointer file:rounded-md file:border file:border-[#9fa4a9] file:bg-[#f0f0f0] file:px-2.5 file:py-1.5 file:text-[15px] file:text-[#4f5358] focus:border-[#9bcdd8]"
                                         />
 
                                         <p className="font-funnel mt-2 text-[14px] text-[#9ea3a9] md:text-[15px]">
@@ -195,10 +195,10 @@ const ApplyForm = () => {
                         <div className="mt-4 flex justify-end">
                             <button
                                 type="button"
-                                className="group bg-btn-primary font-funnel inline-flex items-center gap-3 rounded-full px-5 py-2.5 text-[17px] font-medium text-white transition-opacity hover:opacity-90"
+                                className="group bg-btn-primary font-funnel relative inline-flex items-center rounded-full px-4 py-2 md:py-3 pr-13 md:pr-15 text-[14px] md:text-[17px] font-medium text-white transition-opacity hover:opacity-90"
                             >
                                 Submit
-                                <span className="text-btn-primary flex h-7 w-7 items-center justify-center rounded-full bg-white transition-transform group-hover:translate-x-0.5">
+                                <span className="text-btn-primary absolute right-1 flex h-7 md:h-10 w-7 md:w-10 items-center justify-center rounded-full bg-white transition-transform group-hover:translate-x-0.5">
                                     <svg
                                         viewBox="0 0 20 20"
                                         fill="none"

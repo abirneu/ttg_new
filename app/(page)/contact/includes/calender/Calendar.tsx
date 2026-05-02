@@ -23,21 +23,36 @@ interface CalendarDay {
 
 const Calendar = ({
     onDateSelect,
+    availableDates = [],
+    selectedDate,
 }: {
     onDateSelect: (date: string) => void;
+    availableDates?: string[];
+    selectedDate?: string;
 }) => {
     const [currentDate, setCurrentDate] = useState(() => new Date());
-    const [selectedDate, setSelectedDate] = useState<string>("");
+    const [internalSelectedDate, setInternalSelectedDate] = useState<string>(
+        () => selectedDate ?? ""
+    );
+    const activeSelectedDate = selectedDate ?? internalSelectedDate;
 
     const today = new Date();
     today.setHours(0, 0, 0, 0);
 
+    const hasAvailability = availableDates.length > 0;
+
     const handleDateClick = (date: Date) => {
         if (!isSameMonth(date, currentDate)) return;
         if (date <= today) return;
+        if (hasAvailability) {
+            const dateString = format(date, "yyyy-MM-dd");
+            if (!availableDates.includes(dateString)) return;
+        }
 
         const dateString = format(date, "yyyy-MM-dd");
-        setSelectedDate(dateString);
+        if (selectedDate === undefined) {
+            setInternalSelectedDate(dateString);
+        }
         onDateSelect(dateString);
     };
 
@@ -114,31 +129,42 @@ const Calendar = ({
             <div className="space-y-1">
                 {weeks.map((week, weekIndex) => (
                     <div key={weekIndex} className="grid grid-cols-7 gap-1">
-                        {week.map((day, dayIndex) => (
+                        {week.map((day, dayIndex) => {
+                            const dateString = format(day.date, "yyyy-MM-dd");
+                            const isAvailable =
+                                hasAvailability &&
+                                availableDates.includes(dateString);
+
+                            return (
                             <button
                                 key={dayIndex}
                                 onClick={() => handleDateClick(day.date)}
                                 disabled={
-                                    !day.isCurrentMonth || day.date <= today
+                                    !day.isCurrentMonth ||
+                                    day.date <= today ||
+                                    (hasAvailability && !isAvailable)
                                 }
                                 className={`relative flex aspect-square items-center justify-center rounded-lg font-sans text-[16px] transition-all duration-200 disabled:cursor-not-allowed ${
-                                    selectedDate ===
-                                    format(day.date, "yyyy-MM-dd") // ✅ string comparison
+                                    activeSelectedDate ===
+                                    dateString // ✅ string comparison
                                         ? "bg-btn-primary text-white"
-                                        : day.isToday
-                                          ? "bg-gray-200 text-gray-500"
-                                          : day.isCurrentMonth &&
-                                              day.date > today
-                                            ? "cursor-pointer text-[#0b0b0b] hover:bg-gray-100"
+                                        : isAvailable
+                                          ? "bg-[#dce7ea] text-[#0b0b0b]"
+                                          : day.isToday
+                                            ? "bg-gray-200 text-gray-500"
                                             : day.isCurrentMonth &&
-                                                day.date <= today
-                                              ? "cursor-not-allowed text-gray-300"
-                                              : "text-gray-200"
+                                                day.date > today
+                                              ? "cursor-pointer text-[#0b0b0b] hover:bg-gray-100"
+                                              : day.isCurrentMonth &&
+                                                  day.date <= today
+                                                ? "cursor-not-allowed text-gray-300"
+                                                : "text-gray-200"
                                 }`}
                             >
                                 {format(day.date, "d")}
                             </button>
-                        ))}
+                            );
+                        })}
                     </div>
                 ))}
             </div>

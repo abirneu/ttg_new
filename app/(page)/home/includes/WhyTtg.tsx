@@ -1,7 +1,7 @@
 import React from "react";
-import Image from "next/image";
 import Container from "@/app/components/Container";
 import InfoBadge from "@/app/components/InfoBadge";
+
 
 const whyCards = [
     {
@@ -9,7 +9,7 @@ const whyCards = [
         description:
             "Replace fragmented vendors with one integrated partner across technology, talent, and day-to-day execution.",
         tags: ["Unified Partner", "AI Efficiency"],
-        image: "/images/Home/why-ttg-box-img-1.png",
+        video: "/videos/home/centralized-operations.mp4",
         imageOffsetY: 0,
     },
     {
@@ -17,7 +17,7 @@ const whyCards = [
         description:
             "We embed AI and smart workflows from the ground up, helping teams move faster with fewer manual bottlenecks.",
         tags: ["Aligned Workflows", "Continuous Optimization"],
-        image: "/images/Home/why-ttg-box-img-2.png",
+        video: "/videos/home/automation.mp4",
         imageOffsetY: 0,
     },
     {
@@ -25,16 +25,16 @@ const whyCards = [
         description:
             "Built for companies operating across regions with systems and workflows aligned to international delivery standards.",
         tags: ["Global Support", "Flexible Infrastructure"],
-        image: "/images/Home/why-ttg-box-img-4.png",
-        imageOffsetY: 16,
+        video: "/videos/home/global-operations.mp4",
+        imageOffsetY: 0,
     },
     {
         title: "Frictionless Scaling",
         description:
             "Our model grows with your business, so you can expand into new markets without adding operational complexity.",
         tags: ["Cross-border Scale", "No Hiring Delays"],
-        image: "/images/Home/why-ttg-box-img-3.png",
-        imageOffsetY: 14,
+        video: "/videos/home/frictionless-scaling.mp4",
+        imageOffsetY: 0,
     },
 ];
 
@@ -42,7 +42,7 @@ const WhyTtg = () => {
     return (
         <section className="bg-[#ffffff]">
             <Container className="py-14 md:py-20">
-                <div className="mb-5">
+                <div className="mb-5 flex items-center justify-center md:justify-start">
                     <InfoBadge
                         icon="/icons/Badges/why-question-badge.svg"
                         text="Why TotalTech Global"
@@ -50,11 +50,11 @@ const WhyTtg = () => {
                 </div>
 
                 <div className="max-w-4xl">
-                    <h2 className="font-clash text-[30px] leading-[1.2] font-medium text-[#1a1a2e] md:text-[48px]">
+                    <h2 className="font-clash text-[28px] text-center md:text-left leading-[1.2] font-medium text-[#1a1a2e] md:text-[48px]">
                         Integrated Operations for Companies That Refuse to Stay
                         Stuck
                     </h2>
-                    <p className="font-funnel mt-5 max-w-3xl text-[15px] leading-[1.85] text-[#616b75] md:text-[18px]">
+                    <p className="font-funnel mt-5 max-w-3xl text-[14px] text-center md:text-left leading-[1.85] text-[#616b75] md:text-[18px]">
                         We do not just deliver services. We design and run the
                         systems behind your growth, from execution to
                         optimization, so every moving part works together.
@@ -83,10 +83,10 @@ const WhyTtg = () => {
                                         : ""
                                 }`}
                             >
-                                <h3 className="font-clash text-[28px] leading-[1.2] font-medium text-[#1f2937] md:text-[34px]">
+                                <h3 className="font-clash text-[16px] leading-[1.2] font-medium text-[#1f2937] md:text-[34px]">
                                     {item.title}
                                 </h3>
-                                <p className="font-funnel mt-3 max-w-140 text-[15px] leading-[1.8] text-[#6b7280]">
+                                <p className="font-funnel mt-3 max-w-140 text-[12px] md:text-[15px] leading-[1.8] text-[#6b7280]">
                                     {item.description}
                                 </p>
 
@@ -94,23 +94,25 @@ const WhyTtg = () => {
                                     {item.tags.map((tag) => (
                                         <span
                                             key={tag}
-                                            className="font-funnel rounded-full bg-[#fafafa] px-4 py-1.5 text-[13px] text-[#74808c]"
+                                            className="font-funnel rounded-full bg-[#fafafa] px-4 py-1.5 text-[10px] md:text-[13px] text-[#74808c]"
                                         >
                                             {tag}
                                         </span>
                                     ))}
                                 </div>
-                                <div className="relative mt-8 -mb-8 h-52.5 overflow-hidden md:h-62.5">
-                                    <Image
-                                        src={item.image}
-                                        alt={item.title}
-                                        width={920}
-                                        height={460}
-                                        className="h-full w-full object-contain"
-                                        style={{
-                                            transform: `translateY(${item.imageOffsetY}px)`,
-                                        }}
-                                    />
+                                <div className="relative mt-8 -mb-10 md:-mb-8 h-52.5 w-[calc(100%+3rem)] md:w-[calc(100%+4rem)] -mx-6 md:-mx-8 flex items-center justify-center overflow-hidden md:h-72.5">
+                                    <video
+                                        className="absolute inset-0 h-full w-full object-cover"
+                                        autoPlay
+                                        muted
+                                        loop
+                                        playsInline
+                                    >
+                                        <source
+                                            src={item.video}
+                                            type="video/mp4"
+                                        />
+                                    </video>
                                 </div>
                             </article>
                         );

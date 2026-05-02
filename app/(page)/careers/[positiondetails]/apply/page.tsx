@@ -24,7 +24,7 @@ export default async function Page({ params }: PageProps) {
     }
 
     return (
-        <div className="min-h-screen overflow-hidden bg-[#f7fbfc] py-10 md:py-20">
+        <div className="min-h-screen overflow-hidden bg-[#f7fbfc] pb-10 md:pb-20">
             <ApplyForm job={job} />
         </div>
     );

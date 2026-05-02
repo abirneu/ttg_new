@@ -3,8 +3,9 @@ import { Funnel_Sans } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import NavBar from "./components/NavBar";
-import Footer from "./components/Footer";
+import FooterGate from "./components/FooterGate";
 import { ReduxProvider } from "./redux/provider";
+import AOSProvider from "./components/AOSProvider";
 
 const funnelSans = Funnel_Sans({
     subsets: ["latin"],
@@ -65,9 +66,10 @@ export default function RootLayout({
         >
             <body className="flex min-h-screen flex-col">
                 <ReduxProvider>
+                    <AOSProvider />
                     <NavBar />
                     <main className="grow">{children}</main>
-                    <Footer />
+                    <FooterGate />
                 </ReduxProvider>
             </body>
         </html>

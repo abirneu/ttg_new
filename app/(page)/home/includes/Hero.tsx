@@ -8,7 +8,7 @@ import InfoBadge from "@/app/components/InfoBadge";
 const Hero = () => {
     return (
         <div
-            className="relative flex min-h-screen w-full items-center justify-center overflow-hidden"
+            className="relative flex md:min-h-screen pt-30 md:pt-0 w-full items-center justify-center overflow-hidden"
             style={{
                 backgroundImage: `url('/images/Home/hero-bg-1.png')`,
                 backgroundSize: "cover",
@@ -29,19 +29,19 @@ const Hero = () => {
                 </div>
 
                 {/* Main Heading */}
-                <h1 className="font-clash mb-6 text-4xl leading-tight font-medium text-gray-900 md:text-5xl lg:text-6xl">
+                <h1 className="font-clash mb-6 text-[28px] leading-tight font-medium text-gray-900 md:text-5xl lg:text-6xl">
                     Empowering Businesses{" "}
                     <span className="block">With Smart Tech Solution.</span>
                 </h1>
 
                 {/* Subtitle */}
-                <p className="font-funnel mb-10 max-w-2xl text-base leading-relaxed text-[#646464]/90 md:text-lg">
+                <p className="font-funnel px-4 md:px-0 mb-10 md:max-w-2xl text-[14px] leading-relaxed text-[#646464] md:text-lg">
                     We unify technology, talent, and infrastructure to help your
                     business scale smoothly and efficiently without friction.
                 </p>
 
                 {/* Buttons */}
-                <div className="flex flex-col items-center justify-center gap-4 sm:flex-row md:gap-6">
+                <div className="flex flex-row items-center justify-center gap-5 md:flex-row md:gap-6">
                     <CommonButton
                         href="/consultation"
                         text="Book A Consultation"
@@ -57,10 +57,10 @@ const Hero = () => {
                                 });
                         }}
                     >
-                        <span className="font-funnel flex items-center pl-4 leading-none font-medium">
+                        <span className="font-funnel flex items-center text-[14px] md:text-[20px] pl-4 font-white font-medium ">
                             Explore Services
                         </span>
-                        <span className="bg-btn-primary text-btn-primary flex h-7 w-7 shrink-0 items-center justify-center rounded-full transition-transform group-hover:rotate-45">
+                        <span className="bg-btn-primary text-btn-primary flex h-7 w-7 md:h-10 md:w-10 shrink-0 items-center justify-center rounded-full transition-transform group-hover:rotate-45">
                             <div className="relative h-5 w-5">
                                 <Image
                                     src="/icons/Button_arrow/discover-circle.png"
@@ -75,7 +75,7 @@ const Hero = () => {
 
                 <div className="relative w-screen overflow-hidden md:mt-24">
                     <video
-                        src="/videos/home/home-hero-1.mp4"
+                        src="/videos/home/home-hero-2.mp4"
                         autoPlay
                         muted
                         loop

@@ -55,7 +55,7 @@ const OperatingModel = () => {
                         return (
                             <article
                                 key={card.number}
-                                className={`group relative h-117.5 overflow-hidden border border-[#dadde0] bg-[#ffffff] p-6 transition-[height,border-color,background-color] duration-500 ease-out hover:h-90 hover:border-[#0f1217] md:h-125 md:self-end md:p-8 md:hover:h-105 ${
+                                className={`group relative h-90 md:h-117.5 overflow-hidden border border-[#dadde0] bg-[#ffffff] p-6 transition-[height,border-color,background-color] duration-500 ease-out hover:h-80 md:hover:h-90 hover:border-[#0f1217] md:h-125 md:self-end md:p-8 md:hover:h-105 ${
                                     index > 0 ? "-mt-px md:mt-0 md:-ml-px" : ""
                                 }`}
                                 style={{
