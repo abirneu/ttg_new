@@ -277,12 +277,6 @@ export function MCQSystem() {
                                 <h3 className="text-md pb-2 font-bold text-black md:text-2xl">
                                     {currentQuestion.question}
                                 </h3>
-                                {"description" in currentQuestion &&
-                                    currentQuestion.description && (
-                                        <p className="mb-6 text-sm text-black">
-                                            {currentQuestion.description}
-                                        </p>
-                                    )}
 
                                 <div className="grid grid-cols-2 gap-4">
                                     {(currentQuestion.options || []).map(
@@ -414,7 +408,7 @@ export function MCQSystem() {
                         )}
 
                         {/* Text Input */}
-                        {currentQuestion.type === "text_input" && (
+                        {currentQuestion.type === "text_area" && (
                             <div className="bg-[#f1f6f8]-60 rounded-2xl border-2 border-white bg-clip-padding p-8 backdrop-blur-md backdrop-filter">
                                 <h3 className="text-[20px] pb-6 font-bold text-black md:text-[20px]">
                                     {currentQuestion.question}
@@ -430,20 +424,9 @@ export function MCQSystem() {
                                             handleTextInput(e.target.value)
                                         }
                                         placeholder="Type your answer here..."
-                                        className={`relative z-10 w-full rounded-xl bg-white p-4 text-base text-black placeholder-black/50 focus:outline-none ${
-                                            currentQuestion.id === "q4" &&
-                                            validationError
-                                                ? "ring-2 ring-red-500"
-                                                : ""
-                                        }`}
+                                        className="relative z-10 w-full rounded-xl bg-white p-4 text-base text-black placeholder-black/50 focus:outline-none"
                                     />
                                 </div>
-                                {currentQuestion.id === "q4" &&
-                                    validationError && (
-                                        <p className="mt-2 text-sm text-red-500">
-                                            {validationError}
-                                        </p>
-                                    )}
                             </div>
                         )}
 
@@ -542,12 +525,6 @@ export function MCQSystem() {
                                 <h3 className="text-md pb-2 font-bold text-black md:text-2xl">
                                     {currentQuestion.question}
                                 </h3>
-                                {"description" in currentQuestion &&
-                                    currentQuestion.description && (
-                                        <p className="mb-6 text-sm text-black">
-                                            {currentQuestion.description}
-                                        </p>
-                                    )}
                                 <div className="relative w-full overflow-hidden rounded-xl p-[1px]">
                                     <div className="absolute inset-[-500%] animate-[spin_6s_linear_infinite]" />
                                     <textarea
