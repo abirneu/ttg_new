@@ -92,9 +92,9 @@ const socialLinks: Array<{
 
 const Footer = () => {
     return (
-        <footer className="relative overflow-hidden bg-[#f4f7f8] pt-20 pb-12">
-            <div className="pointer-events-none absolute inset-0">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.9),rgba(247,249,250,0.98)_48%,rgba(242,246,248,1)_100%)]" />
+        <footer className="relative overflow-hidden bg-[#ffffff] pt-20 ">
+            <div className="pointer-events-none absolute inset-0 z-0">
+                <div className="absolute inset-0 bg-white" />
                 <div
                     className="absolute inset-0 opacity-100 mix-blend-multiply"
                     style={{
@@ -224,8 +224,23 @@ const Footer = () => {
                             ))}
                         </div>
                     </div>
-                </div>
+
+                    </div>
+
             </Container>
+
+                <div className="relative left-1/2 z-10 mt-16 w-screen -translate-x-1/2 overflow-hidden bg-white">
+                    <video
+                        className="block h-full w-full object-cover"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        preload="metadata"
+                    >
+                        <source src="/videos/footer/footer.mp4" type="video/mp4" />
+                    </video>
+                </div>
         </footer>
     );
 };
