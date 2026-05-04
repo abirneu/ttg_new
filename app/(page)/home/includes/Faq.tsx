@@ -134,32 +134,35 @@ const Faq = () => {
     return (
         <section className="bg-[#f5f7f8]">
             <Container className="py-14 md:py-20">
-                <div className="grid grid-cols-1 gap-10 md:grid-cols-[minmax(0,1fr)_1px_minmax(0,1.45fr)] md:gap-12">
-                    <div>
-                        <div className="flex items-center justify-center md:justify-start">
-                            <InfoBadge
+                <div className="mb-10 flex flex-col items-center text-center md:mb-4 md:items-start md:text-left">
+                    <div className="flex items-center justify-center md:justify-start">
+                        <InfoBadge
                             icon="/icons/Badges/faq.png"
                             text="FAQ"
                             className="mb-7"
                         />
-                        </div>
-                        
+                    </div>
 
-                        <h2 className="font-clash text-center md:text-left text-[28px] md:text-[32px] font-medium text-[#222a33] md:text-[40px]">
-                            Got questions?
-                        </h2>
-                        <h3 className="font-clash text-center md:text-left text-btn-primary text-[32px] font-medium md:text-[40px]">
-                            We&apos;ve got answers.
-                        </h3>
+                    <h2 className="font-clash text-[28px] font-medium text-[#222a33] md:text-[40px]">
+                        Got questions?
+                    </h2>
+                    <h3 className="font-clash text-[32px] font-medium text-btn-primary md:text-[40px]">
+                        We&apos;ve got answers.
+                    </h3>
 
-                        <p className="font-funnel text-center md:text-left mt-5 max-w-100 text-[14px] leading-[1.45] text-[#5e666f] md:text-[16px]">
-                            We know outsourcing feels like a big decision.
-                            Here&apos;s everything you&apos;re probably
-                            wondering.
+                    
+                </div>
+
+                <div className="grid grid-cols-1 gap-10 md:grid-cols-[minmax(0,1fr)_0.5px_minmax(0,1.45fr)] md:gap-12">
+                   
+                    <div>
+                        <p className="font-funnel mb-5 max-w-100 text-[14px] leading-[1.45] text-[#5e666f] md:text-[16px]">
+                        We know outsourcing feels like a big decision.
+                        Here&apos;s everything you&apos;re probably wondering.
                         </p>
-
-                        <nav
-                            className="mt-10 flex flex-row gap-3.5  overflow-x-auto pb-2 md:flex-col md:overflow-visible"
+                        
+                        <div
+                            className="flex flex-row gap-3.5 overflow-x-auto pb-2 md:flex-col md:overflow-visible"
                             aria-label="FAQ categories"
                         >
                             {categories.map((category) => {
@@ -172,26 +175,25 @@ const Faq = () => {
                                         onClick={() =>
                                             handleCategoryChange(category.id)
                                         }
-                                        className={`font-funnel shrink-0 rounded-full px-4 md:px-0 md:py-0 py-3 bg-[#fafbfc] md:bg-[#f5f7f8] md:w-fit text-left text-[14px]  md:text-[24px] leading-tight transition-colors duration-200 ${
+                                        className={`font-funnel shrink-0 rounded-full px-4 py-3 text-left text-[14px] leading-tight transition-colors duration-200 md:w-fit md:bg-[#f5f7f8] md:px-0 md:py-0 md:text-[24px] ${
                                             isActive
                                                 ? "font-semibold text-[#0c7e9a]"
                                                 : "font-medium text-[#3f444a] hover:text-[#0c7e9a]"
-                                        }`}
+                                        } bg-[#fafbfc]`}
                                     >
                                         {category.label}
                                     </button>
                                 );
                             })}
-                        </nav>
-                            <div className="hidden md:block">
-                                <CommonButton
-                            href="/about"
-                            text="Still have questions? Let's talk"
-                            icon="/icons/Button_arrow/double-right-arrow.png"
-                            className="mt-14 w-fit"
-                        />      
-                            </div>
-                        
+                        </div>
+                        <div className="hidden md:block">
+                            <CommonButton
+                                href="/about"
+                                text="Still have questions? Let's talk"
+                                icon="/icons/Button_arrow/double-right-arrow.png"
+                                className="mt-14 w-fit"
+                            />
+                        </div>
                     </div>
 
                     <div className="hidden bg-[#cfd5da] md:block" />

@@ -20,7 +20,7 @@ const Hero = () => {
                 <div className="pointer-events-none absolute inset-0">
                     {/* australia */}
                     <div
-                        className="absolute top-10 right-10 z-50 w-[240px] md:top-40 md:right-125 md:h-[67px] md:w-[127px]"
+                        className="absolute bottom-60 md:bottom-0 right-40 mz-50 w-[80px] md:top-40 md:right-125 md:h-[67px] md:w-[127px]"
                         data-aos="zoom-in"
                         data-aos-delay="1100"
                         aria-hidden="true"
@@ -35,7 +35,7 @@ const Hero = () => {
                     </div>
                     {/* Germany */}
                     <div
-                        className="absolute top-10 right-10 z-50 w-[240px] md:top-53 md:right-165 md:h-[67px] md:w-[127px]"
+                        className="absolute bottom-50 md:bottom-0 right-70 mz-50 w-[80px] md:top-53 md:right-165 md:h-[67px] md:w-[127px]"
                         data-aos="zoom-in"
                         data-aos-delay="1000"
                         aria-hidden="true"
@@ -50,7 +50,7 @@ const Hero = () => {
                     </div>
                     {/* Canada */}
                     <div
-                        className="absolute top-10 right-10 z-50 w-[240px] md:top-100 md:right-25 md:h-[67px] md:w-[127px]"
+                        className="absolute bottom-15 md:bottom-0 right-10 z-50 w-[80px] md:top-100 md:right-25 md:h-[67px] md:w-[127px]"
                         data-aos="zoom-in"
                         data-aos-delay="900"
                         aria-hidden="true"
@@ -65,7 +65,7 @@ const Hero = () => {
                     </div>
                     {/* USA */}
                     <div
-                        className="absolute top-10 right-10 z-50 w-[240px] md:top-97 md:right-85 md:h-[67px] md:w-[127px]"
+                        className="absolute bottom-30 md:bottom-0 right-35 z-50 w-[80px] md:top-97 md:right-85 md:h-[67px] md:w-[127px]"
                         data-aos="zoom-in"
                         data-aos-delay="800"
                         aria-hidden="true"
@@ -80,7 +80,7 @@ const Hero = () => {
                     </div>
                     {/* UAE */}
                     <div
-                        className="absolute top-10 right-10 z-50 w-[240px] md:top-115 md:right-132 md:h-[67px] md:w-[127px]"
+                        className="absolute bottom-10 md:bottom-0 right-60 z-50 w-[80px] md:top-115 md:right-132 md:h-[67px] md:w-[127px]"
                         data-aos="zoom-in"
                         data-aos-delay="600"
                         aria-hidden="true"

@@ -94,7 +94,7 @@ const Stories = () => {
                         text="Real Stories, Real Results"
                     />
                 </div>
-                
+
 
                 <h2 className="font-clash mt-8 max-w-240 text-center text-[34px] leading-[1.2] font-medium text-[#0b0b0b] md:text-left md:text-[40px] md:leading-[1.05]">
                     Loved by creators, marketers, and teams
@@ -130,7 +130,7 @@ const Stories = () => {
                                                             size={18}
                                                             className={
                                                                 starIndex <
-                                                                story.rating
+                                                                    story.rating
                                                                     ? "text-[#ff6f3d]"
                                                                     : "text-[#d4d4d4]"
                                                             }
@@ -198,7 +198,7 @@ const Stories = () => {
                                                             size={16}
                                                             className={
                                                                 starIndex <
-                                                                story.rating
+                                                                    story.rating
                                                                     ? "text-[#ff6f3d]"
                                                                     : "text-[#d4d4d4]"
                                                             }

@@ -18,7 +18,7 @@ const HomePage = () => {
             <Partners />
             <Service />
             <WhyTtg />
-            <HowWeWork />
+            <HowWeWork /> 
             <TrustClient />
             <Stories />
             <SuccessStories />

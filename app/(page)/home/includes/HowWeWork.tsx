@@ -94,7 +94,7 @@ const HowWeWork = () => {
                                         <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between md:gap-10">
                                             <div>
                                                 <div className="flex items-start justify-between gap-4">
-                                                    <span className="inline-flex h-8 w-8 items-center justify-center rounded-sm bg-[#0f1319] text-white">
+                                                    <span className="inline-flex h-8 w-8 items-center justify-center rounded-sm bg-btn-primary text-white">
                                                         <StepIcon size={16} />
                                                     </span>
                                                     <span className="font-clash text-[32px] leading-none text-[#b3b7bc] md:text-[40px]">
