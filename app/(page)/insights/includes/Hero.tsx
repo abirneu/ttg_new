@@ -20,7 +20,7 @@ const Hero = () => {
         <section
             className="relative w-full overflow-hidden"
             style={{
-                backgroundImage: "url('/images/Insights/insight-hero-bg.png')",
+                backgroundImage: "url('/images/Insights/inshiht-her-bg-v2.png')",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",

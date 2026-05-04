@@ -15,11 +15,11 @@ const services = [
     {
         id: 1,
         icon: "/images/Home/service-icon-1.png",
-        title: "Customer Experience & Back Office",
+        title: "Customer Experience & Back Office ",
         number: "01",
         description:
             "Deliver seamless customer interactions while optimizing backend operations—so your business runs efficiently, responds faster, and scales without increasing overhead.",
-        image: "/images/Home/service-1.png",
+        image: "/images/Home/core-service-1.png",
     },
     {
         id: 2,
@@ -28,7 +28,7 @@ const services = [
         number: "02",
         description:
             "Leverage cutting-edge AI, RPA, and cloud solutions to automate workflows, reduce manual effort, and accelerate digital transformation across your organization.",
-        image: "/images/Home/service-2.png",
+        image: "/images/Home/core-service-2.png",
     },
     {
         id: 3,
@@ -37,7 +37,7 @@ const services = [
         number: "03",
         description:
             "Build, manage, and scale your workforce with end-to-end talent solutions—from recruitment and onboarding to training and performance management.",
-        image: "/images/Home/service-3.png",
+        image: "/images/Home/core-service-3.png",
     },
     {
         id: 4,
@@ -46,7 +46,7 @@ const services = [
         number: "04",
         description:
             "Strengthen your enterprise foundation with robust infrastructure, security, and compliance solutions designed for resilience and growth.",
-        image: "/images/Home/service-4.png",
+        image: "/images/Home/core-service-4.png",
     },
 ];
 
@@ -224,7 +224,12 @@ const Service = () => {
     return (
         <section ref={sectionRef} className="bg-[#f5f7f8]">
             <Container className="py-1 md:py-20">
-                <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between md:gap-12">
+                
+
+                {/* Scroll-animated content */}
+                <div ref={triggerRef} className="mt-14 md:mt-10">
+
+                    <div className="flex flex-col md:py-10 gap-6 md:flex-row md:items-center md:justify-between md:gap-12">
                     <div>
                         <div className="mb-5 flex items-center justify-center md:justify-start">
                             <InfoBadge
@@ -245,10 +250,8 @@ const Service = () => {
                             className="w-fit"
                         />
                     </div>
-                </div>
+                </div> 
 
-                {/* Scroll-animated content */}
-                <div ref={triggerRef} className="mt-14 md:mt-10">
                     <div className="hidden items-start gap-8 md:flex md:flex-row md:gap-16">
                         {/*  Left*/}
                         <div className="flex w-full flex-col md:w-[50%]">
